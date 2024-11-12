@@ -1,68 +1,133 @@
+/* General Styles */
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #272044;
+  background: #272044;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
   max-width: 1400px;
   margin: 0 auto;
 }
+
 .text-center {
   text-align: center;
 }
-.img-responsive {
-  max-width: 100%;
-  display: block;
-}
+
+/* Grid Layout */
 .grid {
   display: grid;
-  grid-gap: 32px;
-  grid-template-columns: 1fr;
+  grid-gap: 64px;
 }
+
 .grid-2-columns {
   grid-template-columns: 1fr 1fr;
 }
+
 .grid-3-columns {
   grid-template-columns: 1fr 1fr 1fr;
 }
+
 .grid-3-columns-with-first-narrow {
   grid-template-columns: 1fr 2fr 2fr;
 }
 
+/* Responsive Images */
+.img-responsive {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+.embed {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+/* Card Styles */
+.card {
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  position: relative;
+}
+
+.card-header.grid {
+  grid-gap: 0;
+}
+
+.card-body {
+  padding: 30px;
+}
+
+.card-footer {
+  padding: 0 30px 30px;
+}
+
+.btn {
+  display: block;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 16px;
+  background-color: #462cb3;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Section Spacing */
 section {
   max-width: 100%;
   margin: 0 auto;
-  padding: 100px;
-}
-section.secondary {
-  background-color: azure;
+  padding: 60px;
 }
 
+section.secondary {
+  background: #f8f8f8;
+}
+
+/* Header Styling */
 header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
-    url("../images/dublin.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/lisbon.png");
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
   text-align: center;
-  padding: 200px 0;
+  padding: 150px 20px;
 }
+
 header h1 {
-  font-size: 48px;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1;
+  margin: 30px 0;
 }
+
 header h2 {
-  font-size: 20px;
   font-weight: 400;
+  font-size: 32px;
   line-height: 1.5;
   margin: 0;
 }
+
 header h3 {
-  font-size: 12px;
   font-weight: 900;
+  font-size: 24px;
   line-height: 1.5;
   letter-spacing: 5px;
   margin: 0;
 }
+
 header a {
   font-weight: 700;
   font-size: 14px;
@@ -76,78 +141,61 @@ header a {
   text-decoration: none;
   text-transform: uppercase;
   background: white;
+  border-radius: 4px;
 }
+
+/* Main Content Styling */
 main {
   background-color: white;
 }
+
 main h2 {
-  font-size: 16px;
   font-weight: 700;
-  line-height: 1.5;
+  font-size: 16px;
+  margin: 0;
   letter-spacing: 5px;
+  color: #272044;
+  opacity: 0.6;
   text-transform: uppercase;
-  color: #272044;
-  margin: 0;
-  opacity: 0.3;
 }
+
 main h3 {
-  font-size: 40px;
   font-weight: 700;
-  line-height: 1.5;
+  font-size: 40px;
   color: #272044;
-  margin: 0;
+  margin: 0 0 10px;
 }
+
+main h4 {
+  font-weight: 700;
+  font-size: 24px;
+  color: #272044;
+}
+
+main h5 {
+  font-weight: 700;
+  font-size: 13px;
+  margin: 0;
+  color: #272044;
+}
+
 main p {
-  font-style: normal;
-  font-size: 16px;
   font-weight: 400;
+  font-size: 16px;
   line-height: 1.5;
   color: #272044;
   opacity: 0.7;
 }
-.card {
-  background: white;
-  margin: 30px 0;
-}
-.card-body {
-  padding: 30px;
-}
-.card-footer {
-  padding: 0 30px 30px;
-}
-.card h4 {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 1.5;
-  color: #272044;
-}
-.card h5 {
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 1.5;
-  color: #272044;
-}
-.btn {
-  display: block;
-  color: white;
-  font-size: 14px;
-  font-weight: 700;
-  text-align: center;
-  letter-spacing: 3px;
-  line-height: 1.5;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 16px;
-  background: #462cb2;
-}
+
+/* Footer Styling */
 footer {
   color: white;
+  padding: 40px 0;
   background-image: linear-gradient(
       rgba(39, 32, 68, 0.9),
       rgba(39, 32, 68, 0.9)
     ),
-    url("../images/footer.jpg");
-
+    url("../images/lisbon-footer.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -155,7 +203,7 @@ footer {
 footer h3 {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.5;
+  line-height: 30px;
 }
 
 footer p {
@@ -171,16 +219,44 @@ footer ul {
 
 footer li {
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 footer a {
   color: white;
   opacity: 0.7;
+  text-decoration: none;
 }
+
+/* Responsive Styles */
 @media (max-width: 960px) {
   header {
-    padding: 60px 0;
+    padding: 80px 20px;
   }
+
+  header h1 {
+    font-size: 48px;
+  }
+
+  header h2 {
+    font-size: 20px;
+  }
+
+  header h3 {
+    font-size: 14px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 32px;
+  }
+
+  section {
+    padding: 20px;
+  }
+}
+.card-header img {
+  display: none;
+}
+.embed {
+  aspect-ratio: 16/9;
 }
